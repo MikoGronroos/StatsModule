@@ -342,7 +342,7 @@ MonoBehaviour:
       Data: 0
     - Name: modifier
       Entry: 7
-      Data: 0|Modifier, Assembly-CSharp
+      Data: 0|Modifier, Assembly-CSharp-firstpass
     - Name: <Type>k__BackingField
       Entry: 3
       Data: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
       Data: 
     - Name: modifier2
       Entry: 7
-      Data: 1|Modifier, Assembly-CSharp
+      Data: 1|Modifier, Assembly-CSharp-firstpass
     - Name: <Type>k__BackingField
       Entry: 3
       Data: 1
@@ -372,7 +372,7 @@ MonoBehaviour:
       Data: 
     - Name: modifier3
       Entry: 7
-      Data: 2|Modifier, Assembly-CSharp
+      Data: 2|Modifier, Assembly-CSharp-firstpass
     - Name: <Type>k__BackingField
       Entry: 3
       Data: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
       Data: 
     - Name: statusEffect
       Entry: 7
-      Data: 3|StatusEffect, Assembly-CSharp
+      Data: 3|StatusEffect, Assembly-CSharp-firstpass
     - Name: <EffectedValueId>k__BackingField
       Entry: 1
       Data: Hp
@@ -408,7 +408,7 @@ MonoBehaviour:
       Data: 0
     - Name: <AppliedModifier>k__BackingField
       Entry: 7
-      Data: 4|Modifier, Assembly-CSharp
+      Data: 4|Modifier, Assembly-CSharp-firstpass
     - Name: <Type>k__BackingField
       Entry: 3
       Data: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
       Data: 
     - Name: statStatusEffect
       Entry: 7
-      Data: 5|StatusEffect, Assembly-CSharp
+      Data: 5|StatusEffect, Assembly-CSharp-firstpass
     - Name: <EffectedValueId>k__BackingField
       Entry: 1
       Data: MaxHp
@@ -450,7 +450,7 @@ MonoBehaviour:
       Data: 0
     - Name: <AppliedModifier>k__BackingField
       Entry: 7
-      Data: 6|Modifier, Assembly-CSharp
+      Data: 6|Modifier, Assembly-CSharp-firstpass
     - Name: <Type>k__BackingField
       Entry: 3
       Data: 1
@@ -662,8 +662,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1114057336}
-    - {fileID: 0}
+    - {fileID: 11400000, guid: 435a89caf7fee6c44bcd841be1f0d815, type: 2}
+    - {fileID: 11400000, guid: eb7b6fdacf311364c8c0a888ebc89de7, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -671,161 +671,13 @@ MonoBehaviour:
     SerializationNodes:
     - Name: <attributes>k__BackingField
       Entry: 7
-      Data: 0|ICoreValue[], Assembly-CSharp
+      Data: 0|ICoreValue[], Assembly-CSharp-firstpass
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 1|Attribute, Assembly-CSharp
-    - Name: <Id>k__BackingField
-      Entry: 1
-      Data: Hp
-    - Name: <MinValue>k__BackingField
-      Entry: 4
-      Data: 0
-    - Name: <MaxValue>k__BackingField
-      Entry: 7
-      Data: 2|Stat, Assembly-CSharp
-    - Name: <Id>k__BackingField
-      Entry: 1
-      Data: MaxHp
-    - Name: <BaseValue>k__BackingField
-      Entry: 4
-      Data: 10
-    - Name: <Value>k__BackingField
-      Entry: 4
-      Data: 0
-    - Name: <CoreEvents>k__BackingField
-      Entry: 7
-      Data: 3|ICoreEvent[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: <StatUI>k__BackingField
-      Entry: 6
-      Data: 
-    - Name: <modifiers>k__BackingField
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Modifier, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: <Value>k__BackingField
-      Entry: 4
-      Data: 0
-    - Name: <StartingPercentage>k__BackingField
-      Entry: 4
-      Data: 1
-    - Name: <CoreEvents>k__BackingField
-      Entry: 7
-      Data: 5|ICoreEvent[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|OnValueModifiedEvent, Assembly-CSharp
-    - Name: <Event>k__BackingField
-      Entry: 7
-      Data: 7|UnityEngine.Events.UnityEvent`1[[ICoreValue, Assembly-CSharp]], UnityEngine.CoreModule
-    - Name: m_PersistentCalls
-      Entry: 7
-      Data: 8|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
-    - Name: m_Calls
-      Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
-        UnityEngine.CoreModule]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 10|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule
-    - Name: m_Target
       Entry: 10
       Data: 0
-    - Name: m_TargetAssemblyTypeName
-      Entry: 1
-      Data: TestCases, Assembly-CSharp
-    - Name: m_MethodName
-      Entry: 1
-      Data: OnValueChanged
-    - Name: m_Mode
-      Entry: 3
-      Data: 0
-    - Name: m_Arguments
-      Entry: 7
-      Data: 11|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule
-    - Name: m_ObjectArgument
-      Entry: 10
-      Data: 1
-    - Name: m_ObjectArgumentAssemblyTypeName
-      Entry: 1
-      Data: UnityEngine.Object, UnityEngine
-    - Name: m_IntArgument
-      Entry: 3
-      Data: 0
-    - Name: m_FloatArgument
-      Entry: 4
-      Data: 0
-    - Name: m_StringArgument
-      Entry: 1
-      Data: 
-    - Name: m_BoolArgument
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_CallState
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: <StatUI>k__BackingField
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -834,13 +686,13 @@ MonoBehaviour:
       Data: 
     - Name: <stats>k__BackingField
       Entry: 7
-      Data: 12|ICoreValue[], Assembly-CSharp
+      Data: 1|ICoreValue[], Assembly-CSharp-firstpass
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 9
-      Data: 2
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 13
       Data: 

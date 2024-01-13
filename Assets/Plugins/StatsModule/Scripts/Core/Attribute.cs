@@ -3,12 +3,12 @@ using System;
 using UnityEngine;
 
 
-[Serializable]
-public class Attribute : ICoreValue, IDetails
+[CreateAssetMenu(menuName = "StatsModule/Attribute")]
+public class Attribute : ScriptableObject, ICoreValue, IDetails
 {
     [field: SerializeField] public string Id { get; private set; }
     [field: SerializeField] public float MinValue { get; private set; }
-    [field: OdinSerialize] public Stat MaxValue { get; private set; }
+    [field: SerializeField] public Stat MaxValue { get; private set; }
     [field: SerializeField] public float Value { get; private set; }
     [field: Range(0,1)]
     [field: SerializeField] public float StartingPercentage { get; private set; }
@@ -48,4 +48,16 @@ public class Attribute : ICoreValue, IDetails
             Event.Event?.Invoke(this);
         }
     }
+
+    public ICoreValue Copy(ICoreOwner owner)
+    {
+        Attribute attribute = ScriptableObject.CreateInstance<Attribute>();
+        attribute.Id = Id;
+        attribute.MinValue = MinValue;
+        attribute.MaxValue = owner.stats.GetCoreValue<Stat>(MaxValue.Id);
+        attribute.Value = Value;
+        attribute.StartingPercentage = StartingPercentage;
+        return attribute;
+    }
+
 }

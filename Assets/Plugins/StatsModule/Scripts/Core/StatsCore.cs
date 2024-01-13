@@ -26,6 +26,22 @@ public class StatsCore : MonoBehaviour
     {
         var coreOwners = FindObjectsOfType<MonoBehaviour>().OfType<ICoreOwner>();
 
+        foreach (var owner in coreOwners)
+        {
+            for (int i = 0; i < owner.stats.Length; i++)
+            {
+                owner.stats[i] = (Stat)owner.stats[i].Copy(owner);
+            }
+        }
+
+        foreach (var owner in coreOwners)
+        {
+            for (int i = 0; i < owner.attributes.Length; i++)
+            {
+                owner.attributes[i] = (Attribute)owner.attributes[i].Copy(owner);
+            }
+        }
+
         coreOwners.ForEach(core => core.stats.ForEach(t => t.OnStart()));
         coreOwners.ForEach(core => core.attributes.ForEach(t => t.OnStart()));
     }

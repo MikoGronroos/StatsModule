@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[Serializable]
-public class Stat : ICoreValue, IDetails
+[CreateAssetMenu(menuName = "StatsModule/Stat")]
+public class Stat : ScriptableObject, ICoreValue, IDetails
 {
 
     [field: SerializeField] public string Id { get; private set; }
@@ -71,5 +71,14 @@ public class Stat : ICoreValue, IDetails
                 Decrease.Event?.Invoke(this);
             }
         }
+    }
+
+    public ICoreValue Copy(ICoreOwner owner)
+    {
+        Stat stat = ScriptableObject.CreateInstance<Stat>();
+        stat.Id = Id;
+        stat.BaseValue = BaseValue;
+        stat.Value = Value;
+        return stat;
     }
 }
