@@ -658,47 +658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb125d410bbd77428882ef0f9ce8e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 435a89caf7fee6c44bcd841be1f0d815, type: 2}
-    - {fileID: 11400000, guid: eb7b6fdacf311364c8c0a888ebc89de7, type: 2}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: <attributes>k__BackingField
-      Entry: 7
-      Data: 0|ICoreValue[], Assembly-CSharp-firstpass
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: <stats>k__BackingField
-      Entry: 7
-      Data: 1|ICoreValue[], Assembly-CSharp-firstpass
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+  <Attributes>k__BackingField:
+  - {fileID: 11400000, guid: 435a89caf7fee6c44bcd841be1f0d815, type: 2}
+  <Stats>k__BackingField:
+  - {fileID: 11400000, guid: eb7b6fdacf311364c8c0a888ebc89de7, type: 2}
 --- !u!1 &2051647447
 GameObject:
   m_ObjectHideFlags: 0

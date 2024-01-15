@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public interface ICoreOwner
 {
 
-    ICoreValue[] attributes {  get; }
-    ICoreValue[] stats { get; }
+    Attribute[] Attributes {  get; }
+    Stat[] Stats { get; }
 
 }

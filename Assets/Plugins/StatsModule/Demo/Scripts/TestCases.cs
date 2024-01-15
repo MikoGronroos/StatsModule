@@ -22,42 +22,42 @@ public class TestCases : SerializedMonoBehaviour
 
     private void Start()
     {
-        enemy.attributes.GetCoreValue<Attribute>("Hp").CoreEvents.Register<OnValueModifiedEvent>(OnValueChanged);
+        enemy.Attributes.GetCoreValue<Attribute>("Hp").CoreEvents.Register<OnValueModifiedEvent>(OnValueChanged);
     }
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.G))
         {
-            enemy.attributes.GetCoreValue<Attribute>("Hp").ModifyValue(-10 * Time.deltaTime);
+            enemy.Attributes.GetCoreValue<Attribute>("Hp").ModifyValue(-10 * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.H))
         {
-            enemy.attributes.GetCoreValue<Attribute>("Hp").ModifyValue(10 * Time.deltaTime);
+            enemy.Attributes.GetCoreValue<Attribute>("Hp").ModifyValue(10 * Time.deltaTime);
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            enemy.stats.GetCoreValue<Stat>("MaxHp").ApplyModifier(modifier);
+            enemy.Stats.GetCoreValue<Stat>("MaxHp").ApplyModifier(modifier);
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            enemy.stats.GetCoreValue<Stat>("MaxHp").ApplyModifier(modifier2);
+            enemy.Stats.GetCoreValue<Stat>("MaxHp").ApplyModifier(modifier2);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            enemy.stats.GetCoreValue<Stat>("MaxHp").ApplyModifier(modifier3);
+            enemy.Stats.GetCoreValue<Stat>("MaxHp").ApplyModifier(modifier3);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            enemy.stats.GetCoreValue<Stat>("MaxHp").RemoveModifier(modifier);
+            enemy.Stats.GetCoreValue<Stat>("MaxHp").RemoveModifier(modifier);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            enemy.stats.GetCoreValue<Stat>("MaxHp").RemoveModifier(modifier2);
+            enemy.Stats.GetCoreValue<Stat>("MaxHp").RemoveModifier(modifier2);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            enemy.stats.GetCoreValue<Stat>("MaxHp").RemoveModifier(modifier3);
+            enemy.Stats.GetCoreValue<Stat>("MaxHp").RemoveModifier(modifier3);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {

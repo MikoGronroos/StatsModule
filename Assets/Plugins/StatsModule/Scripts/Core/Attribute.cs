@@ -54,7 +54,7 @@ public class Attribute : ScriptableObject, ICoreValue, IDetails
         Attribute attribute = ScriptableObject.CreateInstance<Attribute>();
         attribute.Id = Id;
         attribute.MinValue = MinValue;
-        attribute.MaxValue = owner.stats.GetCoreValue<Stat>(MaxValue.Id);
+        attribute.MaxValue = owner.Stats.GetCoreValue<Stat>(MaxValue.Id);
         attribute.Value = Value;
         attribute.StartingPercentage = StartingPercentage;
         return attribute;

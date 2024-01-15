@@ -28,22 +28,22 @@ public class StatsCore : MonoBehaviour
 
         foreach (var owner in coreOwners)
         {
-            for (int i = 0; i < owner.stats.Length; i++)
+            for (int i = 0; i < owner.Stats.Length; i++)
             {
-                owner.stats[i] = (Stat)owner.stats[i].Copy(owner);
+                owner.Stats[i] = (Stat)owner.Stats[i].Copy(owner);
             }
         }
 
         foreach (var owner in coreOwners)
         {
-            for (int i = 0; i < owner.attributes.Length; i++)
+            for (int i = 0; i < owner.Attributes.Length; i++)
             {
-                owner.attributes[i] = (Attribute)owner.attributes[i].Copy(owner);
+                owner.Attributes[i] = (Attribute)owner.Attributes[i].Copy(owner);
             }
         }
 
-        coreOwners.ForEach(core => core.stats.ForEach(t => t.OnStart()));
-        coreOwners.ForEach(core => core.attributes.ForEach(t => t.OnStart()));
+        coreOwners.ForEach(core => core.Stats.ForEach(t => t.OnStart()));
+        coreOwners.ForEach(core => core.Attributes.ForEach(t => t.OnStart()));
     }
 
     public void StartStatusEffect(ICoreOwner target, StatusEffect effect)
@@ -61,7 +61,7 @@ public class StatsCore : MonoBehaviour
 
     private IEnumerator StatStatusEffectCoroutine(ICoreOwner target, StatusEffect effect)
     {
-        Stat effectedValue = target.stats.GetCoreValue<Stat>(effect.EffectedValueId);
+        Stat effectedValue = target.Stats.GetCoreValue<Stat>(effect.EffectedValueId);
         effectedValue.ApplyModifier(effect.AppliedModifier);
         yield return new WaitForSeconds(effect.Duration);
         effectedValue.RemoveModifier(effect.AppliedModifier);
@@ -70,7 +70,7 @@ public class StatsCore : MonoBehaviour
 
     private IEnumerator AttributeStatusEffectCoroutine(ICoreOwner target, StatusEffect effect)
     {
-        Attribute effectedValue = target.attributes.GetCoreValue<Attribute>(effect.EffectedValueId);
+        Attribute effectedValue = target.Attributes.GetCoreValue<Attribute>(effect.EffectedValueId);
         switch (effect.RepeatableType)
         {
             case RepeatableType.Duration:
