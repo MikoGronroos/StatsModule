@@ -28,22 +28,23 @@ public class StatsCore : MonoBehaviour
 
         foreach (var owner in coreOwners)
         {
-            for (int i = 0; i < owner.Stats.Length; i++)
-            {
-                owner.Stats[i] = (Stat)owner.Stats[i].Copy(owner);
-            }
+            RegisterNewStats(owner);
         }
-
-        foreach (var owner in coreOwners)
+    }
+    
+    public void RegisterNewStats(ICoreOwner owner)
+    {
+        for (int i = 0; i < owner.Stats.Length; i++)
         {
-            for (int i = 0; i < owner.Attributes.Length; i++)
-            {
-                owner.Attributes[i] = (Attribute)owner.Attributes[i].Copy(owner);
-            }
+            owner.Stats[i] = (Stat)owner.Stats[i].Copy(owner);
         }
-
-        coreOwners.ForEach(core => core.Stats.ForEach(t => t.OnStart()));
-        coreOwners.ForEach(core => core.Attributes.ForEach(t => t.OnStart()));
+        for (int i = 0; i < owner.Attributes.Length; i++)
+        {
+            owner.Attributes[i] = (Attribute)owner.Attributes[i].Copy(owner);
+        }
+        
+        owner.Attributes.ForEach(t => t.OnStart());
+        owner.Stats.ForEach(t => t.OnStart());
     }
 
     public void StartStatusEffect(ICoreOwner target, StatusEffect effect)
