@@ -12,7 +12,8 @@ public class Attribute : ScriptableObject, ICoreValue, IDetails
     [field: SerializeField] public float Value { get; private set; }
     [field: Range(0,1)]
     [field: SerializeField] public float StartingPercentage { get; private set; }
-    public CoreEvents CoreEvents { get; private set; } 
+
+    public CoreEvents CoreEvents { get; private set; } = new CoreEvents();
     [field: SerializeField] public StatUI StatUI { get; private set; }
 
     public void OnStart()

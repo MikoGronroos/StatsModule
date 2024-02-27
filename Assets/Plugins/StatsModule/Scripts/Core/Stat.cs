@@ -11,7 +11,7 @@ public class Stat : ScriptableObject, ICoreValue, IDetails
     [field: SerializeField] public string Id { get; private set; }
     [field: SerializeField] public float BaseValue { get; private set; }
     [field: SerializeField] public float Value {  get; private set; }
-    public CoreEvents CoreEvents { get; private set; }
+    public CoreEvents CoreEvents { get; private set; } = new CoreEvents();
     [field: SerializeField] public StatUI StatUI { get; private set; }
     [field: OdinSerialize] private List<Modifier> modifiers { get; set; } = new List<Modifier>();
 
